@@ -83,7 +83,9 @@
     <Build Include="Functions\GetDBVersion.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\multi_tenant_deployment.ps1" />
+    <None Include="Scripts\multi_tenant_deployment.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="db_catalog.LOCAL.publish.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

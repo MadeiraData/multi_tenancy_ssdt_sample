@@ -9,7 +9,7 @@ Example usage:
 
 .\multi_tenant_deployment.ps1 -SqlInstance $env:COMPUTERNAME `
 -PromptBeforeTenantDeployments -TrustServerCertificate `
--FilesRootPath "C:\Users\EitanBlumin\Madeira\Everyone - Documents\Training Services\Internal Training\Multi-Tenancy\db_multitenancy_sample" `
+-FilesRootPath "C:\Users\EitanBlumin\source\repos\multi_tenancy_ssdt_sample" `
 -CatalogDacPacFilePath "\db_catalog\bin\Debug\db_catalog.dacpac" `
 -CatalogPublishXmlFile "\db_catalog\bin\Debug\db_catalog.LOCAL.publish.xml" `
 -TenantDacPacFilePath "\db_customer\bin\Debug\db_customer.dacpac" `
