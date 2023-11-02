@@ -5,9 +5,9 @@ Create date: 2022-05-10
 Description: Creates a new tenant
 =============================================
 Example usage:
-DECLARE @DataSource sysname, @DBName sysname, @TenantUID uniqueidentifier
+DECLARE @DataSource sysname, @DBName sysname, @TenantUID uniqueidentifier = NEWID()
 
-EXEC [dbo].[PROC_NewTenant] @DataSource = @DataSource OUTPUT, @DBName = @DBName OUTPUT, @TenantUID = @TenantUID OUTPUT
+EXEC [dbo].[PROC_NewTenant] @Alias = 'Test', @DataSource = @DataSource OUTPUT, @DBName = @DBName OUTPUT, @TenantUID = @TenantUID
 
 SELECT @DataSource, @DBName, @TenantUID
 */

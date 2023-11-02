@@ -81,6 +81,8 @@
     <Build Include="Stored Procedures\PROC_ServiceStop.sql" />
     <Build Include="Tables\tblGlobalParams.sql" />
     <Build Include="Functions\GetDBVersion.sql" />
+    <Build Include="Stored Procedures\PROC_DeleteTenant.sql" />
+    <Build Include="Stored Procedures\PROC_SoftDeleteTenant.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\multi_tenant_deployment.ps1">

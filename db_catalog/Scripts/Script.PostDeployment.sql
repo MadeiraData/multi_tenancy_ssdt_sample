@@ -17,7 +17,7 @@ MERGE INTO dbo.tblGlobalParams AS Target
 USING (VALUES 
    (N'TenantModelDatabase', 'db_tenant_model', NULL, N'Name of the database to be used as a cloneable tenant model')
   ,(N'TenantDatabaseNamePrefix', 'db_tenant_', NULL, NULL)
-  ,(N'DBVersion', '1.0.0.0', NULL, N'DB Version')
+  ,(N'DBVersion', '1.0.2.0', NULL, N'DB Version')
   ,(N'TenantModelDatabase_RDS_S3_ARN_BackupPath', 'arn:aws:s3:::tenantmodel/db_tenant_model.bak', NULL, 'If on AWS RDS for SQL Server, backup and restore the tenant model to/from this path')
 ) 
 AS Source (ParamName, ParamValueString, ParamValueInt, ParamDescription) 
@@ -82,8 +82,8 @@ DECLARE @mergeOutput TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO dbo.[tblTenantModelDataTables] AS [Target]
 USING (VALUES
   (1,N'dbo',N'tblGlobalParams')
- ,(2,N'dbo',N'ProductSubCategory')
- ,(3,N'dbo',N'ProductCategory')
+ ,(2,N'dbo',N'ProductCategory')
+ ,(3,N'dbo',N'ProductSubCategory')
 ) AS [Source] ([ExecutionOrder],[SchemaName],[TableName])
 ON ([Target].[SchemaName] = [Source].[SchemaName])
 AND ([Target].[TableName] = [Source].[TableName])
